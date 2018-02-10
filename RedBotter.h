@@ -7,6 +7,7 @@
 
 class RedBotter
 {
+    // Instance Wrapper of RedBot's motor library
     private:
         RedBotMotors motor;
 

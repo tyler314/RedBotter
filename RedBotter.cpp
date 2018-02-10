@@ -2,12 +2,13 @@
 #include <RedBot.h> 
 
 /*
-* Average Speeds
-* 1 - 25 in / sec
-* 2 - 11 in / sec
-* 3 - 6 in / sec
-* 4 - 4 in / sec
+Average Speeds
+1 - 25 in / sec
+2 - 11 in / sec
+3 - 6 in / sec
+4 - 4 in / sec
 */
+
 #define AVG_SPEED_1 25
 #define AVG_SPEED_2 11
 #define AVG_SPEED_3 6
@@ -16,11 +17,19 @@
 
 RedBotter::RedBotter(RedBotMotors &motors)
 {
+    //  Instance Wrapper of RedBot's motor library
     motor = motors;
 }
 
 void RedBotter::driveDistance(int distance, int velocity)
 {
+    /*
+    Moves robot specified distance in inches, at the specified
+    velocity
+    param: distance - distance in inches to travel
+    param: velocity - 1 - 4, fastest to slowest, respectively
+    */
+
    float t = 0.0;
    switch(velocity){
       case 1:
